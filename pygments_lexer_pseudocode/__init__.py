@@ -6,7 +6,7 @@ from pygments.token import Error, Punctuation, Text, Comment, Operator, Keyword,
 
 class PseudocodeLexer(RegexLexer):
     '''
-    A Pseudo code (fr) lexer
+    A Pseudo code (es) lexer
     '''
     name = 'Pseudocode'
     aliases = ['pseudocode', 'pseudo', 'algorithm', 'algo']
@@ -49,22 +49,22 @@ class PseudocodeLexer(RegexLexer):
                  (r'[\s]+', Text)
         ],
         'core':[ # Statements
-                 (r'\b(debut|début|fin|si|alors|sinon|fin[_ ]si|tant[ _]que|tantque|fin[ _]tantque|faire|répéter'
+                 (r'\b(inicio|fin|si|entonces|sino|fin[_ ]si|tant[ _]que|mietras|fin[ _]mientras|hacer|repetir'
                   r'repeter|type|structure|fin[ _]structure|fonction|procédure|procedure|retourner|renvoyer|'
-                  r'pour|fin[ _]pour|à|déclarations?|juqsque|spécialise|specialise|comporte|super|public|privé|protégé|'
+                  r'para|fin[ _]para|hasta|déclarations?|juqsque|spécialise|specialise|comporte|super|public|D.V.|privé|protégé|'
                   r'classe'
                   r')\s*\b', Keyword),
 
                  # Data Types
-                 (r'\b(entiers?|chaines?|chaînes?|réels?|reels?|caractères?|caracteres?|booléens?|'
+                 (r'\b(entero?|caracter?|real?|caracteres?|booleano?|'
                   r'booleens?|tableaux?|rien)\s*\b', 
                   Keyword.Type),
 
-                  (r'\b(vrai|faux|nil)\s*\b',
+                  (r'\b(verdadero|falso|nil|acción)\s*\b',
                    Name.Constant),
                   
                  # Operators
-                 (r'(<=|>=|<>|<-|\^|\*|\+|-|\/|<|>|=|\\\\|mod|←|↑|≤|≥|≠|÷|×|\.\.|\[|\]|\.|non|xou|et|ou)',
+                 (r'(<=|>=|<>|<-|\^|\*|\+|-|\/|<|>|=|\\\\|mod|←|↑|≤|≥|≠|÷|×|\.\.|\[|\]|\.|no|xou|and|or)',
                   op_replace),
                   
                  (r'(\(|\)|\,|\;|:)',
@@ -74,7 +74,7 @@ class PseudocodeLexer(RegexLexer):
                  # Keyword.Declaration),
 
                   # Intrinsics
-                 (r'\b(sqrt|pow|cos|sin|tan|arccos|arcsin|arctan|arctan2|lire|ecrire|écrire|'
+                 (r'\b(sqrt|pow|cos|sen|tan|arccos|arcsen|arctan|arctan2|lectura|escritura|écrire|'
                   r'exp|ln|log|détruire|detruire'
                   r')\s*\b', Name.Builtin)
                 ],

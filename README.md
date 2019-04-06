@@ -1,4 +1,4 @@
-# (French) Pseudocode syntax lexer for Pygments
+# (Spanish) Pseudocode syntax lexer for Pygments
 
 This package contains a Pygments Lexer for some basic pseudocode algorithmics.
 
